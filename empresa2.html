@@ -1,43 +1,173 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Currículum - Alexis Javier Rojas Torres</title>
   <link rel="stylesheet" href="empresa2.css">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Perfil de Empresa - Feria TP</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(135deg, #e0e7ff 0%, #f4f7fa 100%);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+      animation: fadeInBody 1s;
+    }
+    @keyframes fadeInBody {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    .card {
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+      padding: 38px 32px 32px 32px;
+      max-width: 420px;
+      width: 100%;
+      animation: slideUp 1s;
+      position: relative;
+      overflow: hidden;
+    }
+    @keyframes slideUp {
+      from { transform: translateY(40px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    .profile-pic-container {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 4px solid #004080;
+      margin: 0 auto 18px auto;
+      box-shadow: 0 2px 12px rgba(0,64,128,0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #e6f0ff;
+      animation: popIn 1.2s;
+    }
+    @keyframes popIn {
+      0% { transform: scale(0.7); opacity: 0; }
+      80% { transform: scale(1.1); opacity: 1; }
+      100% { transform: scale(1); }
+    }
+    .profile-pic-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .name {
+      text-align: center;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #004080;
+      margin-bottom: 4px;
+      letter-spacing: 0.5px;
+      animation: fadeIn 1.2s 0.2s backwards;
+    }
+    .subtitle {
+      text-align: center;
+      color: #0077cc;
+      font-size: 1.05rem;
+      margin-bottom: 22px;
+      animation: fadeIn 1.2s 0.3s backwards;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    .section {
+      background: #e6f0ff;
+      border-left: 6px solid #004080;
+      padding: 13px 16px;
+      margin-bottom: 14px;
+      border-radius: 8px;
+      animation: fadeInSection 1s;
+      transition: box-shadow 0.2s;
+    }
+    .section:hover {
+      box-shadow: 0 2px 12px rgba(0,64,128,0.10);
+    }
+    @keyframes fadeInSection {
+      from { opacity: 0; transform: translateX(-20px);}
+      to { opacity: 1; transform: translateX(0);}
+    }
+    .section strong {
+      color: #004080;
+      font-size: 1.01rem;
+      display: block;
+      margin-bottom: 2px;
+      letter-spacing: 0.2px;
+    }
+    .contact-link {
+      color: #0077cc;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .contact-link:hover {
+      color: #004080;
+      text-decoration: underline;
+    }
+    .footer {
+      text-align: center;
+      font-size: 0.95rem;
+      color: #888;
+      margin-top: 18px;
+      opacity: 0.7;
+      animation: fadeIn 1.2s 0.5s backwards;
+    }
+  </style>
 </head>
 <body>
-
-  <div class="perfil-empresa">
-    <img src="AML (1).png" alt="Logo Empresa" class="logo">
-
-    <div class="empresa-nombre">Alexis Javier Rojas Torres</div>
-    <div class="etiqueta-area">Área: estudiante tecnico profesional</div>
-
-    <div class="descripcion">
-
+  <div class="card">
+    <div class="profile-pic-container">
+      <img src="unnamed.jpg" alt="Foto de Alexis Javier Rojas Torres">
     </div>
+    <div class="name">Alexis Javier Rojas Torres</div>
+    <div class="subtitle">Área: Estudiante Técnico Profesional</div>
 
-    <div class="datos-clave">
-      <div class="dato">
-        <strong>Ubicación:</strong><br>
-        Santiago, Chile
-      </div>
-      
-      <div class="dato">
-        <strong>Especialidades requeridas:</strong><br>
-        tecnico en programacion
-      </div>
-      <div class="dato">
-        <strong>Contacto:</strong><br>
-        alexis.tojas.torres@alumnos.sip.cl
-      </div>
+    <div class="section">
+      <strong>Ubicación:</strong>
+      Santiago, Chile
     </div>
-
-    <div class="enlace-sitio">
-      <a href="https://www.canva.com/design/DAGmlcei6TQ/kAEnha5wDYTuAOwsXEUUig/edit?utm_content=DAGmlcei6TQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank">este es mi curriculum</a>
+    <div class="section">
+      <strong>Dirección:</strong>
+      Venancia Leiva 1709, La Pintana
+    </div>
+    <div class="section">
+      <strong>Especialidades:</strong>
+      Administración, Ventas, Marketing
+    </div>
+    <div class="section">
+      <strong>Habilidades:</strong>
+      <ul style="margin: 0 0 0 18px; padding: 0; list-style: disc;">
+        <li>Trabajo en equipo</li>
+        <li>Comunicación efectiva</li>
+        <li>Responsabilidad y compromiso</li>
+        <li>Aprendizaje rápido</li>
+      </ul>
+    </div>
+    <div class="section">
+      <strong>Hobbies:</strong>
+      <ul style="margin: 0 0 0 18px; padding: 0; list-style: disc;">
+        <li>Lectura</li>
+        <li>Trabajo En Equipo</li>
+        <li>Tecnología</li>
+      </ul>
+    </div>
+    <div class="section">
+      <strong>Contacto:</strong>
+      <a class="contact-link" href="mailto:alexis.rojas.torres@alumnos.sip.cl">alexis.rojas.torres@alumnos.sip.cl</a>
+    </div>
+    <div class="footer">
+      Currículum diseñado para procesos de selección empresarial.
     </div>
   </div>
-
 </body>
 </html>
